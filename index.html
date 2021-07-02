@@ -1,0 +1,19 @@
+  const keyupPassword = () => {
+    let input = document.getElementById('newPassword').value
+    let onenumber = document.getElementById('oneNumber')
+    let onelower = document.getElementById('oneLowercase')
+    let counts = document.getElementById('sixCaracteres')
+    
+    input.length >= 6 ? counts.style.color = "#62942F" : counts.style.color = "#863944" // count 6 caracters
+
+    //let hasUpperCase = (input.match(/[A-Z]/g) || []).length
+    //console.log("hasUpperCase     ",hasUpperCase)
+
+    let hasLowerCase = (input.match(/[a-z]/g) || []).length
+    //console.log("hasLowerCase     ",hasLowerCase)
+    hasLowerCase > 0 ? onelower.style.color = "#62942F" : onelower.style.color = "#863944"
+
+    let hasNumber = (input.match(/[0-9]/g) || []).length
+    //console.log("hasNumber     ",hasNumber)
+    hasNumber > 0 ? onenumber.style.color = "#62942F" : onenumber.style.color = "#863944"
+  }
